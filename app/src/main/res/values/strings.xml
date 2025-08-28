@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="members">Integrantes:</string>
+    <string name="txt_member1">Gustavo Joaquin Chazarreta</string>
+    <string name="txt_member2">Ezequiel Rickert</string>
+    <string name="txt_member3">Santiago Britos</string>
+    <string name="title">TP1</string>
+    <string name="btnEj1">Ejercicio 1</string>
+    <string name="btnEj2">Ejercicio 2</string>
+</resources>
