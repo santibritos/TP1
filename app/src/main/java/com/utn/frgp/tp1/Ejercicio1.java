@@ -21,4 +21,7 @@ public class Ejercicio1 extends AppCompatActivity {
             return insets;
         });
     }
+    public int suma(int a, int b){
+        return a+b;
+    }
 }
