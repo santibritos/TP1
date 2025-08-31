@@ -8,4 +8,8 @@
     <string name="btnEj1">Ejercicio 1</string>
     <string name="btnEj2">Ejercicio 2</string>
     <string name="suma">Suma</string>
+    <string name="primer_numero">Primer Numero :</string>
+    <string name="resultado">Resultado</string>
+    <string name="calcular">Calcular</string>
+    <string name="primernumero">Primer Numero:</string>
 </resources>
