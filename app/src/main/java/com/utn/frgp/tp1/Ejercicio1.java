@@ -30,7 +30,7 @@ public class Ejercicio1 extends AppCompatActivity {
 
         String valor1 = num1.getText().toString();
         String valor2 = num2.getText().toString();
-
+//MOD
         if (!valor1.isEmpty() && !valor2.isEmpty()) {
             int v_01 = Integer.parseInt(valor1);
             int v_02 = Integer.parseInt(valor2);
