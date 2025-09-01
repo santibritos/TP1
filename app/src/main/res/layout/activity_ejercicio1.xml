@@ -1,97 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    tools:context=".Ejercicio1">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="407dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="40dp"
-        android:background="@android:color/holo_purple"
-        android:backgroundTint="@android:color/holo_purple"
-        android:drawableTint="@android:color/holo_purple"
-        android:foregroundTint="@android:color/holo_purple"
-        android:text="SUMA"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
-        android:id="@+id/txtNumero_01"
-        android:layout_width="187dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="42dp"
-        android:text="@string/primernumero"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="187dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:text="Segundo Numero"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtN02"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtN02" />
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/txtResultado"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtN02" />
+        <!-- Título principal -->
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Calculadora"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
 
-    <EditText
-        android:id="@+id/txtN02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="12dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtN01" />
+        <!-- Número 1 -->
+        <TextView
+            android:id="@+id/txtNumero_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número 1 (suma)"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/txtN01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:ignore="LabelFor" />
+        <EditText
+            android:id="@+id/txtN01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Número 1"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumero_01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="139dp"
-        android:backgroundTintMode="add"
-        android:onClick="suma"
-        android:text="@string/calcular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
-        tools:ignore="MissingConstraints" />
+        <!-- Número 2 -->
+        <TextView
+            android:id="@+id/txtNumero_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número 2 (suma)"
+            app:layout_constraintTop_toBottomOf="@+id/txtN01"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
 
+        <EditText
+            android:id="@+id/txtN02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Número 2"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumero_02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Botón Sumar -->
+        <Button
+            android:id="@+id/btnSuma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sumar"
+            android:onClick="suma"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/white"
+            android:elevation="4dp"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtN02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Número para ln -->
+        <TextView
+            android:id="@+id/txtNumeroLn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número para ln"
+            app:layout_constraintTop_toBottomOf="@+id/btnSuma"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <EditText
+            android:id="@+id/txtN_Ln"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Número para ln"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumeroLn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Botón ln -->
+        <Button
+            android:id="@+id/btnLn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ln"
+            android:onClick="logaritmoNatural"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/white"
+            android:elevation="4dp"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtN_Ln"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Resultado -->
+        <EditText
+            android:id="@+id/txtResultado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Resultado"
+            android:inputType="text"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:focusable="false"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@+id/btnLn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
